@@ -1,5 +1,5 @@
 from django.db import models
-from apps.users.models import User
+from users.models import User
 
 class PlayerProfile(models.Model):
     user = models.ForeignKey(
