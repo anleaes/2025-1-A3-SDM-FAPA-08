@@ -18,8 +18,8 @@ inventarioapp/__pycache__/*
 /apps/quests/__pycache__/
 /apps/quests/migrations/*
 
-/apps/questcompleteds/__pycache__/
-/apps/questcompleteds/migrations/*
+/apps/completedquests/__pycache__/
+/apps/completedquests/migrations/*
 
 /apps/achievements/__pycache__/
 /apps/achievements/migrations/*
