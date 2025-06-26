@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'playerprofiles.apps.PlayerprofilesConfig',
     'items.apps.ItemsConfig',
     'inventories.apps.InventoriesConfig',
-    'inventoryintems.apps.InventoryitemsConfig',
+    'inventoryitems.apps.InventoryitemsConfig',
 ]
 
 MIDDLEWARE = [
