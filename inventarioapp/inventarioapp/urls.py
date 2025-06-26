@@ -22,4 +22,5 @@ urlpatterns = [
     path('users/', include('users.urls', namespace='users')),
     path('playerprofiles/', include('playerprofiles.urls', namespace='playerprofiles')),
     path('items/', include('items.urls', namespace='items')),
+    path('inventories/', include('inventories.urls', namespace='inventories')),
 ]
