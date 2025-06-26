@@ -7,9 +7,9 @@ class PlayerProfile(models.Model):
         on_delete=models.CASCADE, 
         verbose_name='Usuario',
     )
+    playername = models.CharField('Nome do Jogador', null=False, blank=True, max_length=100)
     level = models.IntegerField('Nivel', default=1)
     experience = models.IntegerField('Experiencia', default=0)
-    total_score = models.IntegerField('Pontuacao Total', default=0)
 
     class Meta:
         verbose_name = 'Perfil de Jogador'
