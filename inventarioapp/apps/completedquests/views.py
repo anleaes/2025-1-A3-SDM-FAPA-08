@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from .models import CompletedQuest
+from rest_framework import viewsets
+from .serializer import CompletedQuestSerializer
 
-# Create your views here.
+class CompletedQuestViewSet(viewsets.ModelViewSet):
+    queryset = CompletedQuest.objects.all()
+    serializer_class = CompletedQuestSerializer
