@@ -24,4 +24,5 @@ urlpatterns = [
     path('items/', include('items.urls', namespace='items')),
     path('inventories/', include('inventories.urls', namespace='inventories')),
     path('inventoryitems/', include('inventoryitems.urls', namespace='inventoryitems') ),
+    path('quests/', include('quests.urls', namespace='quests') ),
 ]
