@@ -1,0 +1,2 @@
+# GET http://localhost:8000/playerprofiles
+# Authorization: Token 182aaad7e34344e8504649518230c5c90c019554
