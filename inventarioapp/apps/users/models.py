@@ -1,6 +1,6 @@
 from django.db import models
 
-class Usuario(models.Model):
+class User(models.Model):
     username = models.CharField('Nome de Usuario', max_length=150, unique=True)
     email = models.EmailField('Email', unique=True)
     birth_date = models.DateField('Data de Nascimento', null=True, blank=True)
