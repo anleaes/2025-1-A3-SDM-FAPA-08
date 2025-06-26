@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'users.apps.UsersConfig',
     'playerprofiles.apps.PlayerprofilesConfig',
+    'items.apps.ItemsConfig',
 ]
 
 MIDDLEWARE = [
