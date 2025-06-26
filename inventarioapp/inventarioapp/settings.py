@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'items.apps.ItemsConfig',
     'inventories.apps.InventoriesConfig',
     'inventoryitems.apps.InventoryitemsConfig',
+    'quests.apps.QuestsConfig',
 ]
 
 MIDDLEWARE = [
