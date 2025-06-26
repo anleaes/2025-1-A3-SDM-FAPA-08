@@ -1,3 +1,4 @@
 from django.shortcuts import render
-
-# Create your views here.
+from .models import CompletedQuest
+from rest_framework import viewsets
+from .serializer import CompletedQuestSerializer
