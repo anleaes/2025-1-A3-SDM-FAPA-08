@@ -1,0 +1,92 @@
+@startuml Inventarioapp_ClassDiagram
+
+!define ENTITY class
+!define FK --> 
+
+title Sistema de Inventário Gamificado
+
+ENTITY User {
+    + id: int
+    + username: string
+    + email: string
+    + birth_date: date
+    --
+    + __str__(): string
+}
+
+ENTITY PlayerProfile {
+    + id: int
+    + user: User
+    + playername: string
+    + level: int
+    + experience: int
+    --
+    + __str__(): string
+}
+
+ENTITY Item {
+    + id: int
+    + nome: string
+    + descricao: text
+    + photo: ImageField
+    + doc: FileField
+    + raridade: string
+    --
+    + __str__(): string
+}
+
+ENTITY Inventario {
+    + id: int
+    + owner: PlayerProfile
+    + max_capacity: int
+    + created_at: datetime
+    --
+    + __str__(): string
+}
+
+ENTITY InventoryItem {
+    + id: int
+    + inventory: Inventario
+    + item: Item
+    + quantity: int
+    --
+    + __str__(): string
+}
+
+ENTITY Quest {
+    + id: int
+    + title: string
+    + description: text
+    + xp_reward: int
+    --
+    + __str__(): string
+}
+
+ENTITY CompletedQuest {
+    + id: int
+    + player_profile: PlayerProfile
+    + quest: Quest
+    + completion_date: datetime
+    --
+    + __str__(): string
+}
+
+ENTITY Achievement {
+    + id: int
+    + title: string
+    + description: text
+    + points: int
+    --
+    + __str__(): string
+}
+
+User ||--o{ PlayerProfile : "1:N"
+PlayerProfile ||--o{ Inventario : "1:N"
+PlayerProfile ||--o{ CompletedQuest : "1:N"
+
+Inventario ||--o{ InventoryItem : "1:N"
+Item ||--o{ InventoryItem : "1:N"
+
+Quest ||--o{ CompletedQuest : "1:N"
+
+@enduml
